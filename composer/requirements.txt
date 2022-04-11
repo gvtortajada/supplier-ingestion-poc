@@ -1,0 +1,11 @@
+apache-airflow
+apache-airflow-providers-google
+pandas
+aiohttp==3.8.1
+fsspec
+gcsfs
+openpyxl
+requests
+validators
+retrying
+numpy

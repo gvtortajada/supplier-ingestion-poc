@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "./venv/bin/airflow",
+            "console": "integratedTerminal",
+            "env": {
+                "AIRFLOW_HOME":"<path to airflow folder>",
+                "AIRFLOW__CORE__EXECUTOR":"DebugExecutor"
+            },
+            "args": [
+                "dags",
+                "test",
+                "<dag_id>",
+                "2020-01-12"
+            ]
+        }
+    ]
+}

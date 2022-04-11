@@ -1,0 +1,10 @@
+.vscode/
+.DS_Store
+__pycache__
+venv/
+logs
+infra/.terraform.lock.hcl
+infra/.terraform/
+composer/airflow/
+composer/input/
+composer/img/
