@@ -15,7 +15,13 @@ def upsert():
 
     name = client.glossary_path(PROJECT_ID, location, 'glossary_v1')
 
-    client.delete_glossary(name)
+    try:
+        client.delete_glossary(name)
+    except Exception as e:
+        if e.message == 'Glossary not found.':
+            logging.info('Deleting glossary failed', e)
+        else:
+            raise e
 
     language_codes_set = translate.types.Glossary.LanguageCodesSet(
         language_codes=[source_lang_code, target_lang_code]
