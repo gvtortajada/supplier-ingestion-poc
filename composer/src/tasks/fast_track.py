@@ -113,6 +113,7 @@ def load_supplier_file(blob, mapping):
         engine='openpyxl',
         dtype = str
     )
+    supplier_df.columns = supplier_df.columns.str.strip()
     logging.info(f'Loading supplier file in {round(time.time() - now,3)}s')
     return supplier_df, supplier_mapping_df, supplier_ext, supplier_name
 
