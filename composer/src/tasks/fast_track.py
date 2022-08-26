@@ -26,7 +26,7 @@ French_manual_mapping = 'SpecsFR'
 English_manual_mapping = 'SpecsEN'
 mandatory_columns = ['SupplierFileName','ManufacturerProductNumber','VendorNumber', 'VendorName', 'Brand', 'DescriptionEnglish']
 processing_chunk_size = 100
-PROJECT_ID = os.getenv('PROJECT_ID', 'fasttrack-poc')
+PROJECT_ID = os.getenv('GCP_PROJECT_ID', 'fasttrack-poc')
 
 
 @task(task_id="load_supplier_files", retries=1)
