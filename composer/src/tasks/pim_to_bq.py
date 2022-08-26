@@ -12,7 +12,7 @@ from tasks.utils import gcs_move_file
 bq_client = bigquery.Client()
 table_id = 'fasttract.pim-extract'
 gcs_client = storage.Client()
-PROJECT_ID = os.getenv('PROJECT_ID', 'fasttrack-poc')
+PROJECT_ID = os.getenv('GCP_PROJECT_ID', 'fasttrack-poc')
 
 @task(task_id="import_pim_extract_to_bq")
 def import_pim_extract_to_bq():
