@@ -29,7 +29,7 @@ resource "google_composer_environment" "composer" {
             core-dags_are_paused_at_creation = "True"
         }
         env_variables = {
-            PROJECT_ID      = var.project_id
+            GCP_PROJECT_ID      = var.project_id
             CRON_SCHEDULER  = var.composer_cron_scheduler
         }
     }
